@@ -5,9 +5,16 @@ package items;
  */
 public class Auction {
     String auc;
-    int item;
-    long bid;
-    long buyout;
-    int quantity;
+    public int item;
+    public long bid;
+    public long buyout;
+    public int quantity;
 
+    public Auction(Auction a) {
+        this.auc = a.auc;
+        this.item = a.item;
+        this.bid = a.bid;
+        this.buyout = a.buyout;
+        this.quantity = a.quantity;
+    }
 }
