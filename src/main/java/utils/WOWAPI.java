@@ -15,12 +15,15 @@ public class WOWAPI {
     public <T> T getJson(String ur, Class<T> type) {
         try {
             URL url = new URL(ur);
+            String response = "";
             try (InputStreamReader reader = new InputStreamReader(url.openStream())) {
-                Gson gson = new GsonBuilder().create();
-                return gson.fromJson(IOUtils.toString(reader), type);
+                response = IOUtils.toString(reader);
             }
+            Gson gson = new GsonBuilder().create();
+            return gson.fromJson(response, type);
         } catch (Exception e) {
             e.printStackTrace();
+
         }
         return null;
     }
