@@ -6,8 +6,8 @@ package items;
 public class Auction {
     String auc;
     public int item;
-    public long bid;
-    public long buyout;
+    public double bid;
+    public double buyout;
     public int quantity;
 
     public Auction(Auction a) {
